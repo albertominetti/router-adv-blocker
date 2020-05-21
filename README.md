@@ -1,5 +1,5 @@
 # router-adv-blocker
-This script avoids the unwanted advertising on the web by blocking the DNS resolution using dnsmask. It block avertisings with any dnsmasq compatible router and automate downloading of the latest list once a week.
+This script avoids the unwanted advertising on the web by blocking the DNS resolution using dnsmasq. It block avertisings with any dnsmasq compatible router and automate downloading of the latest list once a week.
 
 ## Blocking by DNS
 When a website wants to show, it just include in the webpage the url of the adv provider, then your browser has to retrieve the adv and display in the page. The browser has to know the exact IP of the adv before downloading it, and to do that it has to query the DNS server for the lookup. If you are using a router that runs its own DNS resolver as service, you are using most probably dnsmasq. With this script, when your browser ask for the IP of an adv, your dnsmasq on the router will reply with a not valid IP, that leads your browser to fail to display the advertising.
