@@ -22,7 +22,7 @@ The adv hosts are public at the following urls:
 3) (optional) include a run of `adv_adv_blocker.sh` in the cron jobs to weekly update the adv hosts
 
 ## Compatibility
-The script uses a low footprint on memory and space usage to run on low performance systems. It also uses a subset of shell commands that should be compatible with several embedded and old linux routers. It takes about 30 seconds tp a full run including the download of 5 host lists with a total amount of 70 thousands hosts, tested on [DD-WRT](https://dd-wrt.com/) v3.0 July-2015
+The script uses a low footprint on memory and space usage to run on low performance systems. It also uses a subset of shell commands that should be compatible with several embedded and old linux routers. It takes about 30 seconds tp a full run including the download of 5 host lists with a total amount of `70K` hosts, tested on [DD-WRT](https://dd-wrt.com/) v3.0 July-2015
 
 ## Montioring
 * You can find the logs usilg the command  `tail -f /tmp/var/log/messages`
