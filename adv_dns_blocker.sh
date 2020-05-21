@@ -4,8 +4,7 @@ WHITE_LIST=${0%.*}.whitelist
 
 TMP_DIR="/tmp/hosts0.d"
 
-
-logger Starting adv blocking script
+logger Starting adv blocking script at $(date)
 if [ -e $TMP_DIR ]; then
     rm -rf $TMP_DIR
 fi
@@ -29,7 +28,6 @@ for URL in "http://winhelp2002.mvps.org/hosts.txt" \
     else 
         logger Failed
     fi
-    
     let i=i+1
 done
 
@@ -64,5 +62,4 @@ if [ -e $TMP_DIR ]; then
     rm -rf $TMP_DIR
 fi
 
-logger Script adv blocking done
-  
+logger Script adv blocking done at $(date)
