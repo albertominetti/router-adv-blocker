@@ -10,11 +10,11 @@ Moreover also several apps in your smartphone can benefit by this solution, as a
 
 ## How to install
 1) Move both files on your router using scp or by copy&paste
-2) include a run of `avs_dns_blocker.sh` in the startup of the router, [here](https://wiki.dd-wrt.com/wiki/index.php/Startup_Scripts) you can find the setup for ddwrt
+2) include a run of `avs_dns_blocker.sh` in the startup of the router, [here](https://wiki.dd-wrt.com/wiki/index.php/Startup_Scripts) you can find the setup for DD-WRT
 3) (optional) include a run of `adv_adv_blocker.sh` in the cron jobs to weekly update the adv hosts
 
 ## Compatibility
-The script uses a low footprint on memory and space usage to run on low performance systems. It also uses a subset of shell commands that should be compatible with several embedded systems. Tested on DD-WRT [DD-WRT](https://dd-wrt.com/) v3.0 July-2015
+The script uses a low footprint on memory and space usage to run on low performance systems. It also uses a subset of shell commands that should be compatible with several embedded and old linux routers. Tested on [DD-WRT](https://dd-wrt.com/) v3.0 July-2015
 
 ## Montioring
 * You can find the logs usilg the command  `tail -f /tmp/var/log/messages`
