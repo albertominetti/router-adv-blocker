@@ -1,4 +1,4 @@
-# router-adv-blocker
+# Adv blocker for linux routers
 This script avoids the unwanted advertising on the web by blocking the DNS resolution using dnsmasq. It block avertisings with any dnsmasq compatible router and automate downloading of the latest list once a week.
 
 ## Blocking by DNS
@@ -7,6 +7,14 @@ When a website wants to show, it just include in the webpage the url of the adv 
 Of course on yur PC browser you can use any AdBlock extensions for the same purpose, but this requires a setup on each single browser and PC in your home network. Moreover there are several devices that cannot install additional extension or plugin, like the broswers on your mobile.
 
 Moreover also several apps in your smartphone can benefit by this solution, as an example you should be able to avoid the annoying youtube video adv.
+
+## Sources for hostfiles
+The adv hosts are public at the following urls:
+* http://winhelp2002.mvps.org/
+* https://adaway.org/
+* https://github.com/StevenBlack/hosts 
+* https://someonewhocares.org/
+* http://www.hostsfile.org
 
 ## How to install
 1) Move both files on your router using scp or by copy&paste
