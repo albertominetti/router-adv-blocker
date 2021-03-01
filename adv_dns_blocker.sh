@@ -15,8 +15,7 @@ let i=0
 for URL in "http://winhelp2002.mvps.org/hosts.txt" \
            "https://adaway.org/hosts.txt" \
            "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts" \
-           "https://someonewhocares.org/hosts/zero/hosts" \
-           "http://www.hostsfile.org/downloads/hosts.txt" ; do
+           "https://someonewhocares.org/hosts/zero/hosts" ; do
     logger Downloading list: $URL ...
     curl -k $URL >> $TMP_DIR/$i
     if [ $? -eq 0 ]; then 
