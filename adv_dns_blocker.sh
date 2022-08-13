@@ -12,12 +12,9 @@ fi
 mkdir -p $TMP_DIR
 
 let i=0
-for URL in "https://winhelp2002.mvps.org/hosts.txt" \
-           "https://adaway.org/hosts.txt" \
-           "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts" \
-           "https://someonewhocares.org/hosts/zero/hosts" ; do
-    logger Downloading list: $URL ...
-    curl -k $URL >> $TMP_DIR/$i
+while read url; do
+    logger Downloading list: $url ...
+    curl -k $url >> $TMP_DIR/$i
     if [ $? -eq 0 ]; then 
         logger found $(cat $TMP_DIR/$i | wc -l) hosts
         cat $TMP_DIR/$i | sed -e '/localhost/d;
@@ -28,7 +25,7 @@ for URL in "https://winhelp2002.mvps.org/hosts.txt" \
         logger Failed
     fi
     let i=i+1
-done
+done < adv_dns_blocker_list.txt
 
 logger Lists cleaned with  $(cat $TMP_DIR/just-hosts | wc -l) hosts
 sort -u $TMP_DIR/just-hosts -o $TMP_DIR/uniq-hosts
