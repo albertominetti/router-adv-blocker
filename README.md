@@ -15,6 +15,7 @@ The adv hosts are public at the following urls:
 * https://github.com/StevenBlack/hosts 
 * https://someonewhocares.org/
 * ~http://www.hostsfile.org~
+* https://hosts.oisd.nl/basic/
 
 ## How to install
 1) Move both files on your router using scp or by copy&paste
